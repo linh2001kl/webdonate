@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -41,10 +42,8 @@ public class UserEntity<joinColumns> extends BaseEntity {
 				inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private List<RoleEntity> roles = new ArrayList<>();
 	
-	@ManyToMany
-	@JoinTable(name = "user_new", 
-				joinColumns = @JoinColumn(name = "user_id"), 
-				inverseJoinColumns = @JoinColumn(name = "news_id"))
+	
+	@OneToMany(mappedBy = "user")
 	private List<NewEntity> news = new ArrayList<>();
 	
 	public String getEmail() {
@@ -104,6 +103,8 @@ public class UserEntity<joinColumns> extends BaseEntity {
 	public void setRoles(List<RoleEntity> roles) {
 		this.roles = roles;
 	}
+
+
 
 	
 

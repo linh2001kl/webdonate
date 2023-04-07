@@ -35,7 +35,7 @@ public class FeedbackEntity extends BaseEntity {
 	
 
 	@ManyToOne
-	@JoinColumn(name = "new_id")
+	@JoinColumn(name = "news_id")
 	private NewEntity news;
 
 	public NewEntity getNews() {

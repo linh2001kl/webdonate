@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+    <link rel="stylesheet" href="signstyle.css">
+    <title>App</title>
+</head>
+<style>
+    body {
+        background-image: url('1.jpg');
+    }
+</style>
+
+<body>
+    <div class="wrapper" style="background-image: url('tech.jpg');">
+        <div class="inner">
+            <form acction="">
+                <h3>Form Đăng Ký</h3>
+
+                <div class="form-group">
+                    <input type="text" placeholder="First Name" class="form-control">
+                    <input type="text" placeholder="Last Name" class="form-control">
+                </div>
+
+                <div class="form-wrapper">
+                    <input type="text" placeholder="Email" class="form-control">
+                </div>
+
+                <div class="form-wrapper">
+                    <input type="text" placeholder="Address" class="form-control">
+                </div>
+
+                <div class="form-wrapper">
+                    <input id="myID" placeholder="yyyy/mm/dd" class="form-control">
+                </div>
+
+                <div class="form-wrapper">
+                    <select name="" id="" class="form-control">
+                        <option value="" disabled selected>Loại hàng muốn quyên góp</option>
+                        <option value="">青果</option>
+                        <option value="">野菜</option>
+                        <option value="">スナック</option>
+                        <option value="">鮮魚</option>
+                        <option value="">精肉</option>
+                        <option value="">その他</option>
+                    </select>
+                </div>
+
+                <div class="form-wrapper">
+                    <input type="text" placeholder="Password" class="form-control">
+                </div>
+
+                <div class="form-user">
+                    <input type="radio" name="giver" id="giver">
+                    <label for="giver">Giver</label>
+                    <input type="radio" name="receiver" id="receiver">
+                    <label for="receiver">Receiver</label>
+                </div>
+
+                <button onclick="doalert()">Đăng ký</button>
+
+            </form>
+
+
+            <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+            <script>
+                flatpickr("#myID", {});
+            </script>
+            <script>
+                function doalert(obj) {
+                    alert(obj.getAttribute("href"));
+                    return false;
+                }
+            </script>
+            <a href="homepage.html" id="link" onclick="doalert(this); return false;">HOME</a>
+        </div>
+    </div>
+</body>
+
+
+</html>
